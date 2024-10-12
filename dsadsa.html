@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ruleta</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        canvas {
+            border: 2px solid #000;
+            border-radius: 50%;
+        }
+
+        /* Marcador centrado en la parte superior */
+        .marcador {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 30px solid red;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="marcador"></div> <!-- Marcador -->
+        <canvas id="ruleta"></canvas>
+        <button onclick="girarRuleta()">Girar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const opciones = [
+            { color: '#FF6347', texto: 'Opción 1' },
+            { color: '#4682B4', texto: 'Opción 2' },
+            { color: '#32CD32', texto: 'Opción 3' },
+            { color: '#FFD700', texto: 'Opción 4' },
+            { color: '#DA70D6', texto: 'Opción 5' },
+        ];
+
+        const canvas = document.getElementById('ruleta');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 400;
+        canvas.height = 400;
+        let anguloActual = 0;
+
+        function dibujarRuleta() {
+            const numOpciones = opciones.length;
+            const angulo = (2 * Math.PI) / numOpciones;
+
+            opciones.forEach((opcion, i) => {
+                const inicio = angulo * i;
+                const fin = inicio + angulo;
+
+                ctx.beginPath();
+                ctx.moveTo(200, 200);
+                ctx.arc(200, 200, 200, inicio, fin);
+                ctx.fillStyle = opcion.color;
+                ctx.fill();
+                ctx.stroke();
+            });
+        }
+
+        function girarRuleta() {
+            const duracion = 6000; // 6 segundos para mayor suspenso
+            const fin = Math.random() * 360 + 1800; // Mínimo 5 giros completos
+
+            const inicio = Date.now();
+
+            const animar = () => {
+                const tiempo = Date.now() - inicio;
+                const progreso = Math.min(tiempo / duracion, 1);
+                const velocidad = Math.pow(progreso, 2); // Desaceleración suave
+                const angulo = fin * velocidad;
+
+                anguloActual = angulo % 360;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.save();
+                ctx.translate(200, 200);
+                ctx.rotate((anguloActual * Math.PI) / 180);
+                ctx.translate(-200, -200);
+                dibujarRuleta();
+                ctx.restore();
+
+                if (progreso < 1) {
+                    requestAnimationFrame(animar);
+                } else {
+                    mostrarResultado();
+                }
+            };
+
+            animar();
+        }
+
+        function mostrarResultado() {
+            const anguloSeleccionado = (360 - (anguloActual % 360)) % 360;
+            const numOpciones = opciones.length;
+            const anguloPorOpcion = 360 / numOpciones;
+            const indiceSeleccionado = Math.floor(anguloSeleccionado / anguloPorOpcion);
+
+            // SweetAlert para mostrar el resultado
+            Swal.fire({
+                title: '¡Resultado!',
+                text: `Se seleccionó: ${opciones[indiceSeleccionado].texto}`,
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+            });
+        }
+
+        dibujarRuleta();
+    </script>
+</body>
+
+</html>

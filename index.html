@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boceto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu" style="display: none;">
+        <div class="menu-container">
+            <div class="menu-logo">
+                <img src="Latinos en NY Logo.jpg" alt="">
+            </div>
+            <div class="buttons">
+                <button id="open-menu"><i class="fa-solid fa-bars"></i></button>
+                <button style="display: none;" id="close-menu"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="menu-content">
+                <ul style="list-style: none; margin: 0 !important; padding: 0 !important;">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Categorias</a></li>
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="">Portafolio</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="text-center"
+            style="display: flex; padding: 20px 60px; justify-content: space-between; align-items: center;">
+            <div class="logo">
+                <img style="width: 150px;" src="Latinos en NY Logo.jpg" alt="">
+            </div>
+            <div class="menu">
+                <a href="">Inicio</a>
+                <a href="">Categorias</a>
+                <a href="">Servicios</a>
+                <a href="">Portafolio</a>
+                <a href="">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active banner">
+                <img style="width: 100%; height: 750px; object-fit: cover;" src="pexels-luisdalvan-1770775.jpg"
+                    class="d-block w-100 banner-img" alt="Image 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Nuevos comienzos, grandes oportunidades. ¡Caminemos juntos hacia el éxito!</h5>
+                    <a href="">Ver Más</a>
+                </div>
+            </div>
+            <div class="carousel-item banner">
+                <img style="width: 100%; height: 750px; object-fit: cover;" src="pexels-mikel-1239162.jpg"
+                    class="d-block w-100 banner-img" alt="Image 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tu comunidad, tu casa. Estamos aquí para ayudarte a alcanzar tus metas.</h5>
+                    <a href="">Ver Más</a>
+                </div>
+            </div>
+            <div class="carousel-item banner">
+                <img style="width: 100%; height: 750px; object-fit: cover;" src="pexels-vladalex94-1486222.jpg"
+                    class="d-block w-100 banner-img" alt="Image 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Servicios y oportunidades para que cada latino en Nueva York logre su mejor versión.</h5>
+                    <a href="">Ver Más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls (Optional) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="container mt-5">
+        <div class="row">
+
+            <video class="video2" style="width: 100%; padding: 30px 20px; display: none;" controls autoplay muted loop>
+                <source src="video2.mp4">
+            </video>
+
+            <!-- CATEGORIAS -->
+            <div style="display: none;" id="cardCarousel2" class="carousel slide"
+                data-bs-ride="carousel">
+                <h2 class="section-title">Categorias</h2>
+                <div class="bar-categories2" style="display: none;">
+                    <a href="#" class="category-link">Salud y Belleza</a>
+                    <a href="#" class="category-link">Eventos</a>
+                    <a href="#" class="category-link">Latinos Emprendedores</a>
+                    <a href="#" class="category-link">Artistas Latinos en NY</a>
+                    <a href="#" class="category-link">Lo Ultimo</a>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="categoria1.jpg"
+                                        class="card-img-top" alt="Card Image 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salud y Belleza</h5>
+                                        <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                            (opcional)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="categoria2.jpg"
+                                        class="card-img-top" alt="Card Image 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Eventos</h5>
+                                        <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                            (opcional)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="categoria3.jpg"
+                                        class="card-img-top" alt="Card Image 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Latinos Emprendedores</h5>
+                                        <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                            (opcional)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="categoria4.jpeg" class="card-img-top"
+                                        alt="Card Image 4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Artistas Latinos en NY</h5>
+                                        <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                            (opcional)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="col-lg-3 sidebar">
+                <h3>Sección Lateral</h3>
+                <p>Enlaces importantes y contenido adicional.</p>
+                <!-- Espacio para anuncio de barra lateral (300x600) -->
+                <div class="anuncio" style="width: 100%; height: 97%; padding: 0; flex-direction: column; gap: 40px;">
+                    <p><img style="width: 100%;" src="Imagen de WhatsApp 2024-10-11 a las 09.14.13_ebfaf116.jpg"
+                            alt="">Tamaño 100% x 600px</p>
+                    <p><img style="width: 100%; height: 500px;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 13.30.50_3e589bdf.jpg" alt="">Tamaño 100% x 600px
+                    </p>
+                    <p><img style="width: 100%; height: 500px;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 13.33.38_4b0aee38.jpg" alt="">Tamaño 100% x 600px
+                    </p>
+                    <p><img style="width: 100%; height: 500px;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 13.33.39_74a75e49.jpg" alt="">Tamaño 100% x 600px
+                    </p>
+                    <p><img style="width: 100%; height: 500px;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 22.36.44_e2c1482a.jpg" alt="">Tamaño 100% x 600px
+                    </p>
+                    <p><img style="width: 100%; height: 500px;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 22.36.45_b06d3283.jpg" alt="">Tamaño 100% x 600px
+                    </p>
+                    <p><img style="width: 100%; height: 500px;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 22.36.45_d34b0f63.jpg" alt="">Tamaño 100% x 600px
+                    </p>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <section class="col-lg-9 content">
+                <!-- Categorias -->
+                <div id="cardCarousel" class="carousel slide categorias" data-bs-ride="carousel" data-bs-wrap="true">
+                    <h2 class="section-title">Categorias</h2>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img style="height: 350px; object-fit: cover;" src="categoria1.jpg"
+                                            class="card-img-top" alt="Card Image 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Salud y Belleza</h5>
+                                            <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                                (opcional)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img style="height: 350px; object-fit: cover;" src="categoria2.jpg"
+                                            class="card-img-top" alt="Card Image 2">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Eventos</h5>
+                                            <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                                (opcional)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img style="height: 350px; object-fit: cover;" src="categoria3.jpg"
+                                            class="card-img-top" alt="Card Image 3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Latinos Emprendedores</h5>
+                                            <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                                (opcional)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img style="height: 350px; object-fit: cover;" src="categoria4.jpeg"
+                                            class="card-img-top" alt="Card Image 4">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Artistas Latinos en NY</h5>
+                                            <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                                (opcional)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img style="height: 350px; object-fit: cover;" src="categoria1.jpg"
+                                            class="card-img-top" alt="Card Image 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Salud y Belleza</h5>
+                                            <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                                (opcional)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img style="height: 350px; object-fit: cover;" src="categoria2.jpg"
+                                            class="card-img-top" alt="Card Image 2">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Eventos</h5>
+                                            <p class="card-text">Aqui deberia ir un texto relacionado con la categoria
+                                                (opcional)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- Sección 1: Video -->
+                <video class="video1" style="width: 100%; padding: 30px 0;" controls autoplay muted loop>
+                    <source src="video.mp4">
+                </video>
+
+                <!-- Categorias -->
+                <div class="container mt-4">
+                    <h2 class="section-title">Categorias</h2>
+                    <div class="bar-categories">
+                        <a href="#" class="category-link">Salud y Belleza</a>
+                        <a href="#" class="category-link">Eventos</a>
+                        <a href="#" class="category-link">Latinos Emprendedores</a>
+                        <a href="#" class="category-link">Artistas Latinos en NY</a>
+                        <a href="#" class="category-link">Lo Ultimo</a>
+                    </div>
+                    <div class="row g-0 g-3">
+                        <div class="col-md-6">
+                            <div class="position-relative">
+                                <img style="height: 530px;" src="categoria1.jpg" class="collage-image w-100"
+                                    alt="Image 1">
+                                <div class="overlay">
+                                    <p>Salud y Belleza</p> <a href="">Ver Categoria</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="position-relative">
+                                <img style="height: 530px;" src="categoria2.jpg" class="collage-image w-100"
+                                    alt="Image 2">
+                                <div class="overlay">
+                                    <p>Eventos</p> <a href="">Ver Categoria</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-0 g-3 mt-2">
+                        <div class="col-md-6">
+                            <div class="position-relative">
+                                <img style="height: 530px;" src="categoria3.jpg" class="collage-image w-100"
+                                    alt="Image 3">
+                                <div class="overlay">
+                                    <p>Latinos Emprendedores</p> <a href="">Ver Categoria</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="position-relative">
+                                <img style="height: 530px;" src="categoria4.jpeg" class="collage-image w-100"
+                                    alt="Image 4">
+                                <div class="overlay">
+                                    <p>Artistas Latinos en NY</p> <a href="">Ver Categoria</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección 2: Servicios -->
+                <h2 class="section-title">Servicios</h2>
+                <h3 class="section-subtitle">Lo que ofrecemos</h3>
+                <p>Somos una empresa comprometida con la calidad. Ofrecemos servicios que se ajustan a tus
+                    necesidades
+                    con un enfoque altamente profesional.</p>
+                <!-- Espacio para anuncio en contenido (728x90) -->
+                <div class="anuncio" style="width: 100%; height: 90px; padding: 0; display: inline-block;">
+                    <p><img style="width: 100%; height: 90px; object-fit: cover;  object-position: center;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 22.36.45_b06d3283.jpg" alt="">Anuncio 900x90</p>
+                </div>
+
+                <!-- Sección 3: Galería -->
+                <h2 class="section-title">Porfatafolio</h2>
+                <div class="row gallery">
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300x200" alt="Imagen 1" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300x200" alt="Imagen 2" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://via.placeholder.com/300x200" alt="Imagen 3" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Espacio para anuncio en contenido (336x280) -->
+                <div class="anuncio" style="width: 100%; height: 280px; padding: 0; display: inline-block;">
+                    <p><img style="width: 100%; height: 280px; object-fit: cover;  object-position: top;"
+                            src="Imagen de WhatsApp 2024-10-11 a las 13.33.39_74a75e49.jpg" alt="">100px x 280px</p>
+                </div>
+
+                <!-- Sección 5: Contacto -->
+                <h2 class="section-title">Contacto</h2>
+                <p>Para más información, completa el siguiente formulario y nos pondremos en contacto contigo lo
+                    antes
+                    posible.</p>
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="4"
+                            placeholder="Escribe tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+
+            </section>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-top:  0;">Lo Ultimo!</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img src="Latinos en NY Logo.jpg" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Secciones</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Categorias</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorias</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Salud y Belleza</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="#">Latinos Emprendedores</a></li>
+                        <li><a href="#">Artistas Latinos en NY</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Suscribirse al Blog</h5>
+                    <p>Recibe las últimas noticias y actualizaciones directamente en tu correo electrónico.</p>
+                    <form class="subscribe-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                            <button class="btn btn-primary" type="button">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: #adb5bd;">
+            <p class="mb-0">© 2024 Tu Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Obtener los elementos
+        const openMenuButton = document.getElementById('open-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+        const menuContent = document.querySelector('.menu-content');
+
+        // Abrir el menú
+        openMenuButton.addEventListener('click', function () {
+            menuContent.classList.add('active');  // Mostrar el contenido
+            openMenuButton.style.display = 'none';  // Ocultar el botón de abrir
+            closeMenuButton.style.display = 'flex';  // Mostrar el botón de cerrar
+        });
+
+        // Cerrar el menú
+        closeMenuButton.addEventListener('click', function () {
+            menuContent.classList.remove('active');  // Ocultar el contenido
+            openMenuButton.style.display = 'flex';  // Mostrar el botón de abrir
+            closeMenuButton.style.display = 'none';  // Ocultar el botón de cerrar
+        });
+    </script>
+</body>
+
+</html>
